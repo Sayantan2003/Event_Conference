@@ -1,0 +1,966 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{ 
+    scroll-behavior: smooth;
+}
+.webAligned{
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+}
+::-webkit-scrollbar{
+    width: 1.5vw;
+}
+::-webkit-scrollbar-track{
+    background-color: #001a17;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    transition: .5s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #FC4668;
+    border-radius: 15px;
+}
+.homeNav{
+    position: sticky;
+    z-index: 90;
+    background-color: white;
+    padding: 1% 1.2%;
+    border-radius: 5px;
+    color: black;
+    display: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: .4s ease;
+}
+.homeNav.active{
+    display: inline;
+    position: sticky;
+    top: 88vh;
+    left: 92vw;
+}
+.homeNav:hover{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* NAVBAR */
+nav{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 85vh;
+    transition: 1s ease;
+}
+.nav-scrolled{
+    background-color: white;
+    box-shadow: 2px 0 15px rgb(176, 176, 176);
+}
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.logoDark{
+    display: none;
+}
+.logoDark.active{
+    display: block;
+}
+.logoLight.hidden{
+    display: none;
+}
+.navLinks{
+    display: flex;
+    width: 62vw;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 75%;
+    font-weight: bold;
+    transition: .2s ease;
+    position: relative;
+    top: 25%;
+}
+.navList.scroll{
+    color: #574A66;
+    position: relative;
+    top: 25%;
+}
+.navLinks a:hover{
+    color: #FC4668;
+}
+.navLinks a.active{
+    color: #FC4668;
+}
+
+/* HOME */
+#home{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/slider/4.jpg');
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3%;
+}
+.homeContainer p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 550%;
+    font-weight: 900;
+    width: 50vw;
+    text-align: center;
+    color: white;
+    padding-bottom: 2%;
+}
+.eventInfo{
+    display: flex;
+    letter-spacing: 1px;
+    width: 45vw;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+.eventDate{
+    width: 18vw;
+    display: flex;
+}
+.eventDate i{
+    color:#FFA854; 
+    padding-right: 10%;
+    position: relative;
+    top: 50%;
+}
+span{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80%;
+}
+.eventLocation{
+    width: 25vw;
+    display: flex;
+}
+.eventLocation i{
+    color:#FFA854; 
+    padding-right: 8%;
+    position: relative;
+    top: 50%;
+}
+.eventTimer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    align-items: center;
+}
+.timerBox{
+    display: flex;
+    margin-top: 7%;
+    width: 35vw;
+    justify-content: space-between;
+}
+.timerBox .box{
+    padding: 2.5vh 1.5vw;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 7vw;
+    border-radius: 10px;
+}
+.digit{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+}
+.days{
+    background-color: #FFA854;
+}
+.hours{
+    background-color: #FC4668;
+}
+.minutes{
+    background-color: rgb(35, 184, 80);
+}
+.seconds{
+    background-color: #694C8B;
+}
+
+/* ABOUT */
+#about{
+    padding: 9% 0 0% 0;
+    overflow: hidden;
+}
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutHeading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180%;
+    color: #574A66;
+    margin-bottom: 3%;
+}
+.aboutHeading2{
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    width: 40vw;
+    text-align: center;
+    color: #535254;
+    line-height: 250%;
+    font-size: 90%;
+}
+.aboutContent{
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+    justify-content: space-between;
+}
+.aboutContentBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 28vw;
+}
+.box1 img{
+    width: 35%;
+    height: auto;
+}
+.box2 img{
+    width: 70%;
+    height: auto;
+}
+.box1 span{
+    margin-top: 24px;
+}
+.box2 span{
+    margin-top: 4px;
+}
+.box3 span{
+    margin-top: 25px;
+}
+.aboutContentBox span{
+    font-family: 'Montserrat', sans-serif;
+    color: #574A66;
+    font-size: 120%;
+    font-weight: 600;
+}
+.aboutContentBox p{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3%;
+    font-size: 80%;
+    color: #535254;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+
+/* SPEAKERS */
+#speakers{
+    padding: 9% 0 5% 0;
+    overflow: hidden;
+}
+.speakersContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180%;
+    color: #574A66;
+    margin-bottom: 3%;
+}
+.speakersContainer p{
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    width: 40vw;
+    text-align: center;
+    color: #535254;
+    line-height: 240%;
+    font-size: 90%;
+}
+.speakersContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.contentBox{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgZoomer{
+    position: relative;
+    overflow: hidden;
+}
+.speakersContent img{
+    width: 20vw;
+    height: auto;
+    transition: all .8s ease;
+}
+.speakersContent img:hover{
+    transform: scale(1.2);
+}
+.contentBox h3{
+    margin-top: 4%;
+    color: #574A66;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.speakersPost{
+    margin-top: 2%;
+    color: #FC4668;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* SCHEDULES */
+#schedules{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/2.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.schedulesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9% 0;
+}
+.schedulesContainer h2{
+    color: white;
+    font-weight: 800;
+    font-size: 220%;
+}
+.schedulesContainer p{
+    margin-top: 2%;
+    color: white;
+    width: 45vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.scheduleTable{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.row1{
+    margin-top: 5%;
+}
+.scheduleTable1{
+    display: none;
+    transition: .5s ease;
+}
+.scheduleTable1.active{
+    display: block;
+}
+.scheduleTable2{
+    display: none;
+    transition: .5s ease;
+}
+.scheduleTable2.active{
+    display: block;
+}
+.scheduleTable3{
+    display: none;
+    transition: .5s ease;
+}
+.scheduleTable3.active{
+    display: block;
+}
+.scheduleTable4{
+    display: none;
+    transition: .5s ease;
+}
+.scheduleTable4.active{
+    display: block;
+}
+.scheduleTable5{
+    display: none;
+    transition: .5s ease;
+}
+.scheduleTable5.active{
+    display: block;
+}
+.column1{
+    background-color: transparent;
+    transition: .5s ease;
+}
+.column1.active{
+    background-color: #FC4668;
+}
+.column2{
+    background-color: transparent;
+    transition: .5s ease;
+}
+.column2.active{
+    background-color: #694C8B;
+}
+.column3{
+    background-color: transparent;
+    transition: .5s ease;
+}
+.column3.active{
+    background-color: #FFA854;
+}
+.column4{
+    background-color: transparent;
+    transition: .5s ease;
+}
+.column4.active{
+    background-color: #23B850;
+}
+.column5{
+    background-color: transparent;
+    transition: .5s ease;
+}
+.column5.active{
+    background-color: rgb(18, 152, 197);
+}
+.column1 span{
+    color: #FC4668;
+}
+.column1 span.active{
+    color: white;
+}
+.column2 span{
+    color: #FC4668;
+}
+.column2 span.active{
+    color: white;
+}
+.column3 span{
+    color: #FC4668;
+}
+.column3 span.active{
+    color: white;
+}
+.column4 span{
+    color: #FC4668;
+}
+.column4 span.active{
+    color: white;
+}
+.column5 span{
+    color: #FC4668;
+}
+.column5 span.active{
+    color: white;
+}
+.row1{
+    height: 14vh !important;
+}
+.rowAligned{
+    display: flex;
+    width: 100%;
+    height: 17vh;
+}
+.rowAligned:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.columnAligned{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.columnAligned h2{
+    font-size: 170%;
+    line-height: 40%;
+    margin-top: 12%;
+}
+.columnAligned p{
+    width: 100%;
+    font-size: 78%;
+    margin-bottom: 9%;
+}
+.columnAligned span{
+    color: #FC4668;
+    font-size: 100%;
+}
+.timings{
+    width: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90%;
+}
+.timings p{
+    width: 12vw;
+}
+.speakersImg{
+    width: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+}
+.speakersName{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.name{
+    font-family: "Montserrat", sans-serif;
+    font-size: 110%;
+    font-weight: 600;
+}
+.work{
+    color: #FC4668;
+    font-size: 75%;
+    margin-top: 2%;
+}
+.speakersImg img{
+    width: 5vw;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.speakersWorkTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+    font-weight: 600;
+}
+.speakersWorkTitle p{
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+/* TICKETS */
+#tickets{
+    padding: 9% 0 5% 0;
+}
+.ticketsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ticketsContainer h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180%;
+    color: #574A66;
+    margin-bottom: 2%;
+}
+.ticketsContainer p{
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    width: 40vw;
+    text-align: center;
+    color: #535254;
+    line-height: 240%;
+    font-size: 90%;
+}
+.ticketsContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+}
+.ticketsBox{
+    width: 28.5vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 3% 3% 3%;
+    border-radius: 7px;
+}
+.ticketsBox p{
+    width: 100%;
+    color: white
+}
+.ticket1{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/p1.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ticket2{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ticket3{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/p3.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ticketsName{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180% !important;
+    letter-spacing: 2px;
+}
+.ticketsPrice{
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 200% !important;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+.ticketsAbout{
+    margin: 10% 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+}
+.ticketsAbout hr{
+    color: rgba(255, 255, 255, 0.1);
+}
+.facilities{
+    padding: 5%;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.facilities i{
+    position: relative;
+    right: 5%;
+}
+.ticketsBox a{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: .4s ease;
+    text-align: center;
+}
+.ticketsBox a:hover{
+    background-color: white;
+    color: rgba(52,46,64,0.9);
+}
+
+/* REGISTER */
+#register{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/3.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.registerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9% 0;   
+}
+.registerContainer h2{
+    color: white;
+    font-weight: 800;
+    font-size: 220%;
+}
+.registerContainer p{
+    margin-top: 2%;
+    color: white;
+    width: 45vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.registerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+    margin-bottom: 10%;
+    width: 100%;
+}
+.registerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 40%;
+    padding-right: 3%;
+}
+.registerBox input{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 3.8%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+.registerBox select{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 3.8%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+.registerBox select option{
+    color: black;
+}
+.registerBox textarea{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 3.8%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+input[type="submit"]{
+    color: white;
+    background-color: #FC4668;
+    width: 13vw;
+    padding: 3%;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90%;
+    font-weight: 600;
+    margin-top: 2%;
+}
+input::placeholder{
+    color: white;
+}
+textarea::placeholder{
+    color: white;
+}
+.registerMap{
+    width: 60%;
+}
+.contacts{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.aligned{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.aligned span{
+    letter-spacing: 1px;
+}
+.contactsName{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5%;
+}
+.address i{
+    margin-bottom: 20%;
+    font-size: 350%;
+}
+.phone i{
+    margin-bottom: 35%;
+    font-size: 350%;
+}
+.email i{
+    margin-bottom: 20%;
+    font-size: 350%;
+}
+
+/* GALLERY */
+#gallery{
+    padding: 9% 0 5% 0;
+    overflow: hidden;
+}
+.galleryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.galleryContainer h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180%;
+    color: #574A66;
+    margin-bottom: 2%;
+}
+.galleryContainer p{
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    width: 40vw;
+    text-align: center;
+    color: #535254;
+    line-height: 240%;
+    font-size: 90%;
+}
+.gallertContent{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.galleryBox{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.galleryBox:not(:last-child) img{
+    margin-right: 2%;
+}
+.gallertContent img{
+    width: 21vw;
+    height: auto;
+    transition: 1s ease;
+}
+.sliders{
+    margin-top: 2%;
+    width: 7vw;
+    display: flex;
+    justify-content: space-between;
+}
+.sliders p{
+    background-color: #694C8B;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 3.5vw;
+    font-weight: bold;
+    padding: 3%;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.sliders p.active{
+    transform: scale(0.9);
+}
+.sliders:not(:last-child){
+    margin-right: 50%;
+}
+
+/* SPONSERS */
+#sponsers{
+    background-image: linear-gradient(rgba(52,46,64,0.9), rgba(52,46,64,0.9)), url('https://www.madebydesignesia.com/themes/invitex/images/background/4.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.sponsersContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 0 6% 0;   
+}
+.sponsersContainer h2{
+    color: white;
+    font-weight: 800;
+    font-size: 220%;
+}
+.sponsersContainer p{
+    margin-top: 2%;
+    color: white;
+    width: 45vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.sponsersContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+.sponsersContent img{
+    background-color: white;
+    width: 17vw;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer{
+    background-color: white;
+    width: 100%;
+    height: 12vh;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+footer p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 85%;
+    font-weight: 500;
+    color: #574A66;
+}
+.socialIcons{
+    width: 18vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.socialIcons a{
+    color: white;
+    border-radius: 50%;
+    transition: .6s ease;
+}
+.socialIcons a:hover{
+    color: #574A66;
+    background-color: white !important;
+    transform: scale(1.5);
+}
